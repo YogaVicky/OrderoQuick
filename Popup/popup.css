@@ -1,13 +1,7 @@
-body {font-family: Arial, Helvetica, sans-serif;}
+body {font-family: Arial, Helvetica, sans-serif;
+height: 100%;}
 * {box-sizing: border-box;}
 
-.bg {
-  background-image: url("Background.jpg");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
   background-color: #555;
@@ -34,8 +28,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   z-index: 1;
   align-self: center;
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4);
+  background-image: url("Background.jpg"); 
 }
 
 /* Add styles to the form container */
