@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Target Material Design Bootstrap Admin Template</title> 
+    <title>Brick Oven Pizza - Management Dashboard</title> 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="../static/materialize/css/materialize.min.css" media="screen,projection" />
     <!-- Bootstrap Styles-->
@@ -25,8 +25,8 @@
   <!-- <div id="page-wrapper"> -->
     <div class="header"> 
                       <div class="dateselector">
-                        <h1 class="page-header">
-                          Dashboard
+                        <h1 class="page-header" style="font-family: cursive;">
+                          <b>Brick Oven Pizza - Management Dashboard</b>
                       </h1>
                       <form action="/"  id="form-content" method="post" enctype = "multipart/form-data">
                           <input type="date" name="date">
@@ -47,16 +47,16 @@
                 function drawChart() {
                 var data = google.visualization.arrayToDataTable([
                 ['Product', 'Number sold'],
-                ['Product 1', {{pcount[0]}}      ],
-                ['Product 2', {{pcount[1]}}],
-                ['Product 3', {{pcount[2]}}],
-                ['Product 4', {{pcount[3]}}],
-                ['Product 5', {{pcount[4]}}],
-                ['Product 6', {{pcount[5]}}],
-                ['Product 7', {{pcount[6]}}],
-                ['Product 8', {{pcount[7]}}],
-                ['Product 9', {{pcount[8]}}],
-                ['Product 10', {{pcount[9]}}],
+                ['Veg Tandoori Pizza', {{pcount[0]}}      ],
+                ['Tomato Mania Pizza', {{pcount[1]}}],
+                ['Veg Supreme Pizza', {{pcount[2]}}],
+                ['Cheese Bread', {{pcount[3]}}],
+                ['Garlic Bread', {{pcount[4]}}],
+                ['Chese Sticks', {{pcount[5]}}],
+                ['Cheese Cake', {{pcount[6]}}],
+                ['Chocolate Mousse', {{pcount[7]}}],
+                ['Volcano Cake', {{pcount[8]}}],
+                ['Ice Cream', {{pcount[9]}}],
                 ]);
 
                 // Optional; add a title and set the width and height of the chart
@@ -81,16 +81,16 @@
                 function drawChart() {
                   var data = google.visualization.arrayToDataTable([
                 ['Product', 'Number sold'],
-                ['Product 1', {{prcount[0]}}      ],
-                ['Product 2', {{prcount[1]}}],
-                ['Product 3', {{prcount[2]}}],
-                ['Product 4', {{prcount[3]}}],
-                ['Product 5', {{prcount[4]}}],
-                ['Product 6', {{prcount[5]}}],
-                ['Product 7', {{prcount[6]}}],
-                ['Product 8', {{prcount[7]}}],
-                ['Product 9', {{prcount[8]}}],
-                ['Product 10', {{prcount[9]}}],
+                ['Veg Tandoori Pizza', {{prcount[0]}}      ],
+                ['Tomato Mania Pizza', {{prcount[1]}}],
+                ['Veg Supreme Pizza', {{prcount[2]}}],
+                ['Cheese Bread', {{prcount[3]}}],
+                ['Garlic Bread', {{prcount[4]}}],
+                ['Chese Sticks', {{prcount[5]}}],
+                ['Cheese Cake', {{prcount[6]}}],
+                ['Chocolate Mousse', {{prcount[7]}}],
+                ['Volcano Cake', {{prcount[8]}}],
+                ['Ice Cream', {{prcount[9]}}],
                 ]);
 
                 // Optional; add a title and set the width and height of the chart

@@ -67,6 +67,10 @@ padding:0;
     border:1px solid #f3f3f3;
 }
 
+#piechart1 {
+    margin-left: 15%;
+}
+
 h1, .h1, h2, .h2, h3, .h3 {
 margin-top: 7px;
 margin-bottom: -5px;
