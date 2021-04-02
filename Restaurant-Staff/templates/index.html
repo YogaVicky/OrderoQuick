@@ -2,50 +2,55 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./static/popup.css">
+<link rel="stylesheet" href="../static/popup.css">
 </head>
 <body>
 
 <div class="bg">
   {% if res | count !=0 %}
-<div class="form-popup" id="myForm">
-  <form action="/" class="form-container" method="post" enctype = "multipart/form-data">
-    <h1>Order Details</h1>
-    <p><b>Email - {{res[1]}}<br>
-          Orders:</b></p>
-    
-    <table>
-      <tr>
-        <th><b>PRODUCT</b></th>
-        <th><b>QUANTITY</b></th>
-        <th><b>REMARKS</b></th>
-      </tr>
-      <tr>
-        <td>{{res[2]}}</td>
-        <td>{{res[4]}}</td>
-        <td>{{res[5]}}</td>
-      </tr>
-      <tr>
-        <td>{{res[7]}}</td>
-        <td>{{res[9]}}</td>
-        <td>{{res[10]}}</td>
-      </tr>
-      <tr>
-        <td>{{res[12]}}</td>
-        <td>{{res[14]}}</td>
-        <td>{{res[15]}}</td>
-      </tr>
 
-    </table><br><br>
-    <label for="tnum"><b>Token Number</b></label>
-    <input type="text" placeholder="Enter Token Number" name="tnum" required>
+	<div class="form-popup">
+		<div id="myForm">
+			<form action="/" class="form-container" method="post" enctype = "multipart/form-data">
+			  <h1>Order Details</h1>
+			  <p><b>Email - {{res[1]}}<br>
+					Orders:</b></p>
+			  
+			  <table>
+				<tr>
+				  <th><b>PRODUCT</b></th>
+				  <th><b>QUANTITY</b></th>
+				  <th><b>REMARKS</b></th>
+				</tr>
+				<tr>
+				  <td>{{res[2]}}</td>
+				  <td>{{res[4]}}</td>
+				  <td>{{res[5]}}</td>
+				</tr>
+				<tr>
+				  <td>{{res[7]}}</td>
+				  <td>{{res[9]}}</td>
+				  <td>{{res[10]}}</td>
+				</tr>
+				<tr>
+				  <td>{{res[12]}}</td>
+				  <td>{{res[14]}}</td>
+				  <td>{{res[15]}}</td>
+				</tr>
+		  
+			  </table><br><br>
+			  <label for="tnum"><b>Token Number</b></label>
+			  <input type="text" placeholder="Enter Token Number" name="tnum" required>
+		  
+			  <label for="esttime"><b>Estimated Time</b></label>
+			  <input type="text" placeholder="Enter Estimated Time" name="esttime" required>
+		  
+			  <button type="submit" class="btn">Submit</button>
+			</form>
+			</div>
+		  
+	</div>
 
-    <label for="esttime"><b>Estimated Time</b></label>
-    <input type="text" placeholder="Enter Estimated Time" name="esttime" required>
-
-    <button type="submit" class="btn">Submit</button>
-  </form>
-  </div>
   {% endif %}
 </div>
 

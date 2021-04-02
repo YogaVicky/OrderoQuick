@@ -28,6 +28,7 @@ height: 100%;}
   align-self: center;
   overflow: auto; /* Enable scroll if needed */
   background-image: url("Background.jpg"); 
+  /* background: fixed; */
 }
 
 /* Add styles to the form container */
