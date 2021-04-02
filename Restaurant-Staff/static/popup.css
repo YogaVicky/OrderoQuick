@@ -15,14 +15,16 @@ height: 100%;}
   width: 280px;
 }
 
+.bg {
+	background-image: url("Background.jpg"); 
+}
+
 /* The popup form - hidden by default */
 .form-popup {
-  display: block;
-  width: 100%;
-  z-index: 1;
-  align-self: center;
-  overflow:-moz-hidden-unscrollable;
-  background-image: url("Background.jpg"); 
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 /* Add styles to the form container */
