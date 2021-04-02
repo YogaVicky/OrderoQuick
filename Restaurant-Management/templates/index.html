@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Target Material Design Bootstrap Admin Template</title> 
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="../static/materialize/css/materialize.min.css" media="screen,projection" />
+    <!-- Bootstrap Styles-->
+    <link href="../static/css/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="../static/css/font-awesome.css" rel="stylesheet" />
+    <!-- Morris Chart Styles-->
+    <link href="../static/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+    <!-- Custom Styles-->
+    <link href="../static/css/custom-styles.css" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="../static/js/Lightweight-Chart/cssCharts.css">
+</head>
+
+<body>
+    <div id="wrapper">
+      
+		<!-- <div id="page-wrapper"> -->
+		  <div class="header"> 
+                        <div class="dateselector">
+                          <h1 class="page-header">
+                            Dashboard
+                        </h1>
+<<<<<<< HEAD:Restaurant-Management/templates/index.html
+                        <div class="dateselector">
+                          <form action="/"  id="form-content" method="post" enctype = "multipart/form-data">
+                            <input type="date" name="date">
+                            <input type="submit" value="submit">
+=======
+                          <form action="" id="form-content">
+                            <input type="date">
+                            <input type="submit" value="submit" class="btn">
+>>>>>>> 597110b1dabcad2df979109d60a49cd06fb1f7ac:Restaurant-Management/index.html
+                          </form>
+                        </div>
+                      </div>
+                <div id="piechart1"></div>
+
+                <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+                <script type="text/javascript">
+                // Load google charts
+                google.charts.load('current', {'packages':['corechart']});
+                google.charts.setOnLoadCallback(drawChart);
+
+                // Draw the chart and set the chart values
+                function drawChart() {
+                var data = google.visualization.arrayToDataTable([
+                ['Product', 'Number sold'],
+                ['Product 1', {{pcount[0]}}      ],
+                ['Product 2', {{pcount[1]}}],
+                ['Product 3', {{pcount[2]}}],
+                ['Product 4', {{pcount[3]}}],
+                ['Product 5', {{pcount[4]}}],
+                ['Product 6', {{pcount[5]}}],
+                ['Product 7', {{pcount[6]}}],
+                ['Product 8', {{pcount[7]}}],
+                ['Product 9', {{pcount[8]}}],
+                ['Product 10', {{pcount[9]}}],
+                ]);
+
+                // Optional; add a title and set the width and height of the chart
+                var options = {'title':'Total Sales', 'width': 1400, 'height':400};
+
+                // Display the chart inside the <div> element with id="piechart"
+                var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
+                chart.draw(data, options);
+                }
+                </script><br><br>
+
+                <div id="piechart2"></div>
+
+                <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+                <script type="text/javascript">
+                // Load google charts
+                google.charts.load('current', {'packages':['corechart']});
+                google.charts.setOnLoadCallback(drawChart);
+
+                // Draw the chart and set the chart values
+                function drawChart() {
+                  var data = google.visualization.arrayToDataTable([
+                ['Product', 'Number sold'],
+                ['Product 1', {{prcount[0]}}      ],
+                ['Product 2', {{prcount[1]}}],
+                ['Product 3', {{prcount[2]}}],
+                ['Product 4', {{prcount[3]}}],
+                ['Product 5', {{prcount[4]}}],
+                ['Product 6', {{prcount[5]}}],
+                ['Product 7', {{prcount[6]}}],
+                ['Product 8', {{prcount[7]}}],
+                ['Product 9', {{prcount[8]}}],
+                ['Product 10', {{prcount[9]}}],
+                ]);
+
+                // Optional; add a title and set the width and height of the chart
+                var options = {'title':'Profit Margin', 'width':1400, 'height':400};
+
+                // Display the chart inside the <div> element with id="piechart"
+                var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+                chart.draw(data, options);
+                }
+                </script><br><br>
+                
+                
+                <div id="BarGraph1"></div>
+                <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+                <script type="text/javascript">
+                // Load google charts
+                google.charts.load('current', {'packages':['corechart']});
+                google.charts.setOnLoadCallback(drawChart);
+
+                // Draw the chart and set the chart values
+                function drawChart() {
+                var data = google.visualization.arrayToDataTable([
+                ['Tag', 'Number Sold'],
+                ['Pizza', {{tcount[0]}}],
+                ['Bread', {{tcount[1]}}],
+                ['Icecream', {{tcount[2]}}],
+                ]);
+
+                // Optional; add a title and set the width and height of the chart
+                var options = {'title':'Tagwise Sales', 'width':1400, 'height':400};
+
+                // Display the chart inside the <div> element with id="piechart"
+                var chart = new google.visualization.BarChart(document.getElementById('BarGraph1'));
+                chart.draw(data, options);
+                }
+                </script><br><br>
+
+                <div id="BarGraph2"></div>
+                <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+                
+                                        
+            <div id="page-inner">
+
+			<div class="dashboard-cards"> 
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+					
+						<div class="card horizontal cardIcon waves-effect waves-dark">
+						<div class="card-image red">
+						<i class="material-icons dp48">import_export</i>
+						</div>
+						<div class="card-stacked red">
+						<div class="card-content">
+						<h3>{{prtotal}}</h3> 
+						</div>
+						<div class="card-action">
+						<strong>REVENUE</strong>
+						</div>
+						</div>
+						</div>
+	 
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+					
+						<div class="card horizontal cardIcon waves-effect waves-dark">
+						<div class="card-image orange">
+						<i class="material-icons dp48">shopping_cart</i>
+						</div>
+						<div class="card-stacked orange">
+						<div class="card-content">
+						<h3>{{ptotal}}</h3> 
+						</div>
+						<div class="card-action">
+						<strong>SALES</strong>
+						</div>
+						</div>
+						</div> 
+                    </div> 
+<<<<<<< HEAD:Restaurant-Management/templates/index.html
+                    
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+=======
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+					
+>>>>>>> 597110b1dabcad2df979109d60a49cd06fb1f7ac:Restaurant-Management/index.html
+					<div class="card horizontal cardIcon waves-effect waves-dark">
+						<div class="card-image green">
+						<i class="material-icons dp48">supervisor_account</i>
+						</div>
+						<div class="card-stacked green">
+						<div class="card-content">
+						<h3>{{visits}}</h3> 
+						</div>
+						<div class="card-action">
+						<strong>VISITS</strong>
+						</div>
+						</div>
+						</div> 
+						 
+                    </div>
+                </div>
+			   </div>
+<<<<<<< HEAD:Restaurant-Management/templates/index.html
+=======
+
+>>>>>>> 597110b1dabcad2df979109d60a49cd06fb1f7ac:Restaurant-Management/index.html
+            </div>
+    </div>
+    <script src="../static/js/jquery-1.10.2.js"></script>
+	
+	<!-- Bootstrap Js -->
+    <script src="../static/js/bootstrap.min.js"></script>
+	
+	<script src="../static/materialize/js/materialize.min.js"></script>
+	
+    <!-- Metis Menu Js -->
+    <script src="../static/js/jquery.metisMenu.js"></script>
+    <!-- Morris Chart Js -->
+    <script src="../static/js/morris/raphael-2.1.0.min.js"></script>
+    <script src="../static/js/morris/morris.js"></script>
+	
+	
+	<script src="../static/js/easypiechart.js"></script>
+	<script src="../static/js/easypiechart-data.js"></script>
+	
+	 <script src="../static/js/Lightweight-Chart/jquery.chart.js"></script>
+	
+    <!-- Custom Js -->
+    <script src="../static/js/custom-scripts.js"></script> 
+ 
+
+</body>
+
+</html>
