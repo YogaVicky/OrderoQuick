@@ -16,7 +16,7 @@ def dbconnect(sql):
 
 @app.route('/',methods = ['POST', 'GET'])
 def home():
-    sql = "SELECT * FROM customers LIMIT 1"
+    sql = "SELECT * FROM customers ORDER BY Sno DESC LIMIT 1"
     res = dbconnect(sql)
     print(res[0])
     if request.method == 'POST':
