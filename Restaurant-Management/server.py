@@ -219,4 +219,4 @@ def home():
     return render_template('index.html',pcount=pcount,prcount=prcount,tcount=tcount,ptotal=sum(pcount),prtotal=sum(prcount),visits=0)
             
 if __name__ == '__main__':
-    app.run('0.0.0.0',debug = True)
+    app.run('0.0.0.0',port=8000,debug = True)

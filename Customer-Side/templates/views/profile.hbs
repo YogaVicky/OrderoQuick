@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/meetme/img/favicon.png" type="image/png">
+        <title>MeetMe Personal</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/meetme/css/bootstrap.css">
+        <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/meetme/vendors/linericon/style.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/meetme/vendors/owl-carousel/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/meetme/vendors/lightbox/simpleLightbox.css">
+        <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/meetme/vendors/nice-select/css/nice-select.css">
+        <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/meetme/vendors/animate-css/animate.css">
+        <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/meetme/vendors/popup/magnific-popup.css">
+        <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/meetme/vendors/flaticon/flaticon.css">
+        <!-- main css -->
+        <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/meetme/css/style.css">
+        <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/meetme/css/responsive.css">
+    </head>
+    <body>
+        
+        <!--================Header Menu Area =================-->
+        <header class="header_area">
+            <div >
+            	<nav class="navbar navbar-expand-lg navbar-light">
+					<div class="container box_1620">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<h1 class="navbar-brand logo_h"  style="padding-top:90px;font-size:40px;">MY PROFILE</h1>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+							<ul class="nav navbar-nav menu_nav ml-auto">
+								<li class="nav-item active"><a class="nav-link" href="index.html">    </a></li> 
+								<li class="nav-item"><a class="nav-link" href="about-us.html">    </a></li> 
+								<li class="nav-item"><a class="nav-link" href="services.html">    </a></li> 
+								<li class="nav-item submenu dropdown">
+									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">   </a>
+									<ul class="dropdown-menu">
+										<li class="nav-item"><a class="nav-link" href="portfolio.html">     </a></li>
+										<li class="nav-item"><a class="nav-link" href="elements.html">     </a></li>
+									</ul>
+								</li> 
+								<li class="nav-item submenu dropdown">
+									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">    </a>
+									<ul class="dropdown-menu">
+										<li class="nav-item"><a class="nav-link" href="blog.html">   </a></li>
+										<li class="nav-item"><a class="nav-link" href="single-blog.html">   </a></li>
+									</ul>
+								</li> 
+								<li class="nav-item"><a class="nav-link" href="contact.html">  </a></li>
+							</ul>
+						</div> 
+					</div>
+            	</nav>
+            </div>
+        </header>
+        <!--================Header Menu Area =================-->
+        
+        <!--================Home Banner Area =================-->
+        <section class="home_banner_area">
+           	<div class="container box_1620">
+           		<div class="banner_inner d-flex align-items-center">
+					<div class="banner_content">
+						<div class="media">
+							<div class="d-flex">
+								<img src="../../public/img/eventss.jpg" alt="">
+							</div>
+							<div class="media-body">
+								<div class="personal_text">
+									<h6>Hello Everybody, i am</h6>
+									<h3>{{#each info}}{{{firstname}}}  {{{lastname}}}{{/each}}</h3>
+									<h4>{{#each info}}{{location}}{{/each}}</h4>
+									<p>{{#each info}}{{company}}{{/each}}</p>
+									<ul class="list basic_info">
+										<li><a href="#"><i class="lnr lnr-calendar-full"></i> 31st December, 1992</a></li>
+										<li><a href="#"><i class="lnr lnr-phone-handset"></i>{{#each info}}Area code:{{areacode}} Phone:{{phone}}{{/each}} </a></li>
+										<li><a href="#"><i class="lnr lnr-envelope"></i> {{#each info}}{{email}}{{/each}}</a></li>
+										<li><a href="#"><i class="lnr lnr-home"></i> {{#each info}}{{location}}{{/each}}</a></li>
+									</ul>
+									<ul class="list personal_social">
+										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+        </section>
+        <!--================End Home Banner Area =================-->
+        
+        <!--================Welcome Area =================-->
+        
+        <!--================End Welcome Area =================-->
+        
+        <!--================My Tabs Area =================-->
+        <section class="mytabs_area p_120">
+        	<div class="container">
+        		<div class="tabs_inner">
+					<ul class="nav nav-tabs" id="myTab" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">My Experiences</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">My Education</a>
+						</li>
+					</ul>
+					<div class="tab-content" id="myTabContent">
+						<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+							<ul class="list">
+								<li>
+									<span></span>
+									<div class="media">
+										<div class="d-flex">
+											<p>Present Experience</p>
+										</div>
+										<div class="media-body">
+											<h4>{{#each info}}{{company}}{{/each}}</h4>
+											<p>{{#each info}}{{position}}{{/each}} <br />{{#each info}}{{location}}{{/each}}</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<span></span>
+									<div class="media">
+										<div class="d-flex">
+											<p>PREVIOUS Experience</p>
+										</div>
+										<div class="media-body">
+											<h4>{{#each info}}{{pastcompany}}{{/each}}</h4>
+											<p>{{#each info}}{{pastjob}}{{/each}} <br />{{#each info}}{{pastlocation}}{{/each}}</p>
+										</div>
+									</div>
+								</li>
+								<li>
+								<span></span>
+									<div class="media">
+										<div class="d-flex">
+											<p>{{experiencedurationtwo}}</p>
+										</div>
+										<div class="media-body">
+											<h4>{{companytwo}}</h4>
+											<p> <br />{{locationtwo}}</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+							<ul class="list">
+								<li>
+									<span></span>
+									<div class="media">
+										<div class="d-flex">
+											<p>UNDERGRADUATE</p>
+										</div>
+										<div class="media-body">
+											<h4>IIITDM KANCHEEPURAM</h4>
+											<p>{{positionthree}}<br />{{locationthree}}</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<span></span>
+									<div class="media">
+										<div class="d-flex">
+											<p>POST GRADUATE</p>
+										</div>
+										<div class="media-body">
+											<h4>{{#each info}}{{university}}{{/each}}</h4>
+											<p> <br /></p>
+										</div>
+									</div>
+								</li>
+								<li>
+								<span></span>
+									<div class="media">
+										<div class="d-flex">
+											<p></p>
+										</div>
+										<div class="media-body">
+											<h4>Colorlib</h4>
+											<p> <br /></p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+        		</div>
+        	</div>
+        </section>
+        <!--================End My Tabs Area =================-->
+        
+        <!--================Feature Area =================-->
+     
+        <!--================End Feature Area =================-->
+        
+      
+        <!--================End Home Gallery Area =================-->
+        
+        <!--================Testimonials Area =================-->
+     
+        <!--================End Testimonials Area =================-->
+        
+   
+        <!--================End Footer Area =================-->
+        
+        
+        
+        
+        
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        
+        
+        
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/meetme/js/jquery-3.3.1.min.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/meetme/js/popper.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/meetme/js/bootstrap.min.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/meetme/js/stellar.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/meetme/vendors/lightbox/simpleLightbox.min.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/meetme/vendors/nice-select/js/jquery.nice-select.min.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/meetme/vendors/isotope/imagesloaded.pkgd.min.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/meetme/vendors/isotope/isotope.pkgd.min.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/meetme/vendors/owl-carousel/owl.carousel.min.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/meetme/vendors/popup/jquery.magnific-popup.min.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/meetme/js/jquery.ajaxchimp.min.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/meetme/vendors/counter-up/jquery.waypoints.min.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/meetme/vendors/counter-up/jquery.counterup.min.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/meetme/js/mail-script.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/meetme/js/theme.js"></script>
+    </body>
+</html>

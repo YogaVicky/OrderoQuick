@@ -1,0 +1,48 @@
+{
+  "name": "alumni",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo\"Error:no test specified\"&& exit 1",
+    "start": "nodemon app"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "cloudinary": "^1.25.1",
+    "connect-busboy": "0.0.2",
+    "cookie-session": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "express-session": "^1.17.1",
+    "fs": "0.0.1-security",
+    "gulp": "^4.0.2",
+    "handlebars": "^4.7.7",
+    "hbs": "^4.1.1",
+    "jQuery": "^1.7.4",
+    "jquery": "^3.6.0",
+    "jsdom": "^16.5.2",
+    "localstorage": "^1.0.1",
+    "multer": "^1.4.2",
+    "mysql": "^2.18.1",
+    "node-datetime": "^2.1.2",
+    "node-localstorage": "^2.1.6",
+    "nodemailer": "^6.5.0",
+    "nodemon": "^2.0.7",
+    "passport": "^0.4.1",
+    "passport-google-oauth2": "^0.2.0",
+    "passport-google-oauth20": "^2.0.0",
+    "path": "^0.12.7",
+    "pug": "^2.0.4",
+    "sails": "^1.4.2",
+    "sails.io.js-dist": "^1.2.1",
+    "util.promisify": "^1.1.1"
+  },
+  "engines": {
+    "node": "12.4.0"
+  }
+}

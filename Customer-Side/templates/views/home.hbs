@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 3 | Dashboard</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/www.dbsproject.com/AdminLTE-master/plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/www.dbsproject.com/AdminLTE-master/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/www.dbsproject.com/AdminLTE-master/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/www.dbsproject.com/AdminLTE-master/plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/www.dbsproject.com/AdminLTE-master/dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/www.dbsproject.com/AdminLTE-master/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/www.dbsproject.com/AdminLTE-master/plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/www.dbsproject.com/AdminLTE-master/plugins/summernote/summernote-bs4.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+          	<link rel="shortcut icon" type="image/x-icon" href="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/img/favicon.ico">
+       
+<script type="text/javascript" src="handlebars-v4.7.6.js"></script>
+
+
+
+		<!-- CSS here -->
+            <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/css/owl.carousel.min.css">
+            <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/css/flaticon.css">
+            <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/css/price_rangs.css">
+            <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/css/slicknav.css">
+            <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/css/animate.min.css">
+            <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/css/magnific-popup.css">
+            <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/css/fontawesome-all.min.css">
+            <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/css/themify-icons.css">
+            <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/css/slick.css">
+            <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/css/nice-select.css">
+            <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/css/style.css">
+  <style type="text/css">
+    body{
+        font-family: Arail, sans-serif;
+    }
+    /* Formatting search box */
+    .search-box{
+        width: 300px;
+        position: relative;
+        display: inline-block;
+        font-size: 14px;
+    }
+    .search-box input[type="text"]{
+        height: 32px;
+        padding: 5px 10px;
+        border: 1px solid #CCCCCC;
+        font-size: 14px;
+    }
+    .result{
+        position: absolute;        
+        z-index: 999;
+        top: 100%;
+        left: 0;
+    }
+    .search-box input[type="text"], .result{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    /* Formatting result items */
+    .result p{
+        margin: 0;
+        padding: 7px 10px;
+        border: 1px solid #CCCCCC;
+        border-top: none;
+        cursor: pointer;
+    }
+    .result p:hover{
+        background: #f2f2f2;
+    }
+</style>
+
+
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+   
+
+    <!-- SEARCH FORM 
+    <form class="form-inline ml-3">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>-->
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Messages Dropdown Menu -->
+     
+    
+      <li class="nav-item">
+        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+          <i class="fas fa-th-large"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+      <img src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/iitdm-ka.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+           style="opacity: .8">
+      <span class="brand-text font-weight-light">IIITDM ALUMNI</span></br> PORTAL</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">{{name}}</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+       
+          <li class="nav-item">
+            <a href="/profile" class="nav-link">
+              <p>
+                MY PROFILE
+                <span class="right badge badge-danger">New</span>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="/allevents" >
+              <p>
+                UPCOMING EVENTS
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right">6</span>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/layout/top-nav.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Top Navigation</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Top Navigation + Sidebar</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/layout/boxed.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Boxed</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Fixed Sidebar</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/layout/fixed-topnav.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Fixed Navbar</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/layout/fixed-footer.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Fixed Footer</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Collapsed Sidebar</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="/alljobs" >
+              <p>
+                RECENT JOB
+                </br>
+                OPENINGS
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/charts/chartjs.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>ChartJS</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/charts/flot.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Flot</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/charts/inline.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Inline</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Dashboard</h1>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  
+    $('.search-box input[type="text"]').on("keyup input", function(){
+        /* Get input value on change */
+        var inputVal = $(this).val();
+        var resultDropdown = $(this).siblings(".result");
+        if(inputVal.length){
+            $.get('/search?key=%'+inputVal,{term:inputVal}).done(function(data){
+                // Display the returned data in browser
+            
+                
+                   var str=data[0];
+               $("#re").html(data);
+
+                
+                
+            });
+        } else{
+            resultDropdown.empty();
+        }
+    });
+    
+    // Set search input value on click of result item
+        $("#re").click(function(){  
+        var text = document.getElementById("re").innerHTML;
+        window.location.href = '/searchresult?key=%'+text;
+    });  
+    
+});
+</script>
+              <div class="search-box">
+        <input type="text" autocomplete="off" placeholder="Search your friends..." />
+        <div class="result" id="re"></div>
+    </div>
+
+            
+<!--
+<div class="ui search">
+  <input class="prompt" type="text" placeholder="Search GitHub...">
+  <div class="results"></div>
+</div>
+
+<input class="typeahead tt-query" spellcheck="false" autocomplete="off" name="typeahead" type="text" placeholder="Search the profile of your friends" />  -->
+
+
+
+          </div><!-- /.col -->
+
+          <div class="col-sm-6">
+            
+            <ol class="breadcrumb float-sm-right">
+              <li>   </li>
+              <li ><a href="/logout" class="waves-effect waves-light btn-large"style="margin-right:40%; margin-top:5%"><img src="https://img.icons8.com/cotton/45/000000/login-rounded--v1.png"/>LOGOUT</a>
+</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          
+          <!-- ./col -->
+         
+          <!-- ./col -->
+          
+          <!-- ./col -->
+          
+          <!-- ./col -->
+        </div>
+        <!-- /.row -->
+        <!-- Main row -->
+        <div class="row">
+          <!-- Left col -->
+          <section class="col-lg-7 connectedSortable">
+            <!-- Custom tabs (Charts with tabs)-->
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">
+                  <i class="fas fa-chart-pie mr-1"></i>
+               My PROFILE
+                </h3>
+               
+              </div><!-- /.card-header -->
+              <div class="card-body">
+                <div class="tab-content p-0">
+                  <div style="display: grid;grid-template-columns:1fr 1fr;">
+                  <div class="chart tab-pane active" id="revenue-chart"
+                       style="position: relative; height: 300px;">
+                      <img src="https://s3.ap-south-1.amazonaws.com/www.dbsproject.com/pro.jpg" height="300" style="height: 300px;"></img>                         
+                   </div>
+                  <div class="chart tab-pane active"  id="revenue-chart" style="position: relative; height: 300px;">
+                            <a href="/profile" class="waves-effect waves-light btn-large"style="margin-left:20%; margin-top:10%"><img src="https://img.icons8.com/ios-glyphs/45/000000/user-male-circle.png"/>VIEW MY PROFILE</a>
+                            <a href="/info" class="waves-effect waves-light btn-large" style="margin-top: 20%;margin-left:30%"><img src="https://img.icons8.com/ios-glyphs/45/000000/available-updates.png"/>UPDATE</a>
+                       
+                  </div> 
+                  </div> 
+                </div>
+              </div><!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+
+            <!-- DIRECT CHAT -->
+            <div class="card direct-chat direct-chat-primary">
+              <div class="card-header">
+                <h3 class="card-title">ADD Upcoming Event/New Opening or internships</h3>
+              </div>
+             <div style="position: relative; height: 150px;display:grid;grid-template-columns:1fr 1fr;"  >
+             <div style="margin-top: 5%;margin-left:5%">
+             <img src="https://s3.ap-south-1.amazonaws.com/www.dbsproject.com/eventss.jpg" height="170px" width="470px" >
+
+             </div>
+
+             <div>
+            <a href="/event" class="waves-effect waves-light btn-large"style="margin-left:20%; margin-top:25%"><img src="https://img.icons8.com/ios-glyphs/45/000000/add-property.png"/>ADD EVENT</a>
+
+             </div>
+             <div style="margin-top: 5%;">
+             <img src="https://s3.ap-south-1.amazonaws.com/www.dbsproject.com/images.jpg" height="150px" width="500px" >
+
+             </div>
+             <div>
+            <a href="/job" class="waves-effect waves-light btn-large"style="margin-left:10%; margin-top:20%"><img src="https://img.icons8.com/ios-glyphs/45/000000/add-property.png"/>ADD JOB OPENING</a>
+
+             </div>
+
+
+
+
+             </div>
+            
+              
+              
+              <!-- /.card-header -->
+              <div class="card-body">
+                <!-- Conversations are loaded here -->
+                <div class="direct-chat-messages">
+                  <!-- Message. Default to the left -->
+                
+                  <!-- /.direct-chat-msg -->
+
+                  <!-- Message to the right -->
+                  
+                  <!-- /.direct-chat-msg -->
+
+               
+                  <!-- /.direct-chat-msg -->
+
+                  <!-- Message to the right -->
+                  
+                  <!-- /.direct-chat-msg -->
+
+                </div>
+                <!--/.direct-chat-messages-->
+
+                <!-- Contacts are loaded here -->
+             
+                <!-- /.direct-chat-pane -->
+              </div>
+              <!-- /.card-body -->
+              
+              <!-- /.card-footer-->
+            </div>
+            <!--/.direct-chat -->
+
+            <!-- TO DO List -->
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">
+                  <i class="ion ion-clipboard mr-1"></i>
+                  RECENT JOB OPENINGS
+                </h3>
+
+               
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+               {{#each data}}
+             <p>{{>allevents}}</p>
+               {{/each}}
+              </div>
+              <!-- /.card-body -->
+             
+            </div>
+            <!-- /.card -->
+          </section>
+          <!-- /.Left col -->
+          <!-- right col (We are only adding the ID to make the widgets sortable)-->
+          <section class="col-lg-5 connectedSortable">
+
+            <!-- Map card -->
+            <div >
+              <div class="card-header border-0">
+                <h3 class="card-title">
+                  <i class="fas fa-map-marker-alt mr-1"></i>
+                  UPCOMING EVENTS
+                </h3>
+                <!-- card tools -->
+               
+                <!-- /.card-tools -->
+              </div>
+             <div>
+              {{#each daata}}
+            <p> {{>alljobs}}</p>
+              {{/each}}
+             </div>
+              <!-- /.card-body-->
+              
+            
+            <!-- /.card -->
+
+            <!-- Calendar -->
+            <div class="card bg-gradient-success">
+              <div class="card-header border-0">
+
+                <h3 class="card-title">
+                  <i class="far fa-calendar-alt"></i>
+                  Giving Back
+                </h3>
+                <!-- tools card -->
+               
+                </div>
+                
+                <div style="background-image: url('https://s3.ap-south-1.amazonaws.com/www.dbsproject.com/Monarch-Alumni-Giving-250.png');  background-size: cover;    background-position: center;     height:50vh;    position: relative;">
+              <div>
+            <a href="/event" class="waves-effect waves-light btn-large"style="margin-left:20%; margin-top:5%"><img src="https://img.icons8.com/ios-glyphs/45/000000/donate.png"/>CONTRIBUTE TO THE INSTITUTE</a>
+             </div>
+             </div>
+                    <div style="background-image: url('https://s3.ap-south-1.amazonaws.com/www.dbsproject.com/free.jpg');  background-size: cover;    background-position: center;     height:50vh;    position: relative;margin-top:15%;">
+                    <div>
+
+            <a href="/event" class="waves-effect waves-light btn-large"style="margin-left:20%; margin-top:32%"><img src="https://img.icons8.com/ios-glyphs/45/000000/chat.png"/>CREATE A CHAT ROOM HERE</a>
+
+                    </div>
+
+                  </div>
+
+                   
+                    
+
+            
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body pt-0">
+                 
+                  </div>
+                  
+                <!--The calendar -->
+                <div id="calendar" style="width: 100%"></div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </section>
+          <!-- right col -->
+        </div>
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 3.0.4
+    </div>
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+
+
+
+
+<!-- ./wrapper -->
+<script src="https://s3.ap-south-1.amazonaws.com/www.dbsproject.com/AdminLTE-master/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+<!-- jQuery -->
+
+
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/js/jquery.slicknav.min.js"></script>
+
+
+<script src="https://s3.ap-south-1.amazonaws.com/www.dbsproject.com/AdminLTE-master/plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+
+
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+
+<!-- Bootstrap 4 -->
+<script src="https://s3.ap-south-1.amazonaws.com/www.dbsproject.com/AdminLTE-master/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="https://s3.ap-south-1.amazonaws.com/www.dbsproject.com/AdminLTE-master/plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="https://s3.ap-south-1.amazonaws.com/www.dbsproject.com/AdminLTE-master/plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="https://s3.ap-south-1.amazonaws.com/www.dbsproject.com/AdminLTE-master/plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="https://s3.ap-south-1.amazonaws.com/www.dbsproject.com/AdminLTE-master/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="https://s3.ap-south-1.amazonaws.com/www.dbsproject.com/AdminLTE-master/plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="https://s3.ap-south-1.amazonaws.com/www.dbsproject.com/AdminLTE-master/plugins/moment/moment.min.js"></script>
+<script src="https://s3.ap-south-1.amazonaws.com/www.dbsproject.com/AdminLTE-master/plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="https://s3.ap-south-1.amazonaws.com/www.dbsproject.com/AdminLTE-master/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="https://s3.ap-south-1.amazonaws.com/www.dbsproject.com/AdminLTE-master/plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="https://s3.ap-south-1.amazonaws.com/www.dbsproject.com/AdminLTE-master/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="https://s3.ap-south-1.amazonaws.com/www.dbsproject.com/AdminLTE-master/dist/js/adminlte.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="https://s3.ap-south-1.amazonaws.com/www.dbsproject.com/AdminLTE-master/dist/js/pages/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="https://s3.ap-south-1.amazonaws.com/www.dbsproject.com/AdminLTE-master/dist/js/demo.js"></script>
+ <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+		<!-- Jquery, Popper, Bootstrap -->
+		<script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/js/vendor/jquery-1.12.4.min.js"></script>
+	    <!-- Jquery Mobile Menu -->
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/js/jquery.slicknav.min.js"></script>
+
+		<!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/js/owl.carousel.min.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/js/slick.min.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/js/price_rangs.js"></script>
+        
+		<!-- One Page, Animated-HeadLin -->
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/js/wow.min.js"></script>
+		<script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/js/animated.headline.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/js/jquery.magnific-popup.js"></script>
+
+		<!-- Scrollup, nice-select, sticky -->
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/js/jquery.scrollUp.min.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/js/jquery.nice-select.min.js"></script>
+		<script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/js/jquery.sticky.js"></script>
+        
+        <!-- contact js -->
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/js/contact.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/js/jquery.form.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/js/jquery.validate.min.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/js/mail-script.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/js/jquery.ajaxchimp.min.js"></script>
+        
+		<!-- Jquery Plugins, main Jquery -->	
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/js/plugins.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jobfinderportal/assets/js/main.js"></script>
+
+</body>
+</html>

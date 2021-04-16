@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shop-Online</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/script.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/style.css">
+	<!--- sass styling --->
+	<link rel="stylesheet" type="text/css" href="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/scss/homepageStyles.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+
+
+
+</head>
+<body>
+	
+	<button onclick="topFunction()" id="myBtn" title="Go to top" width="35px" height="35px" align="right">⇑</button>
+	
+		<nav class="navbar navbar-toggleable-md navbar-light bg-faded" id="nav-main" style="background-color:#9CC9C9;padding-bottom: 3%;padding-top: 3%;">
+	  		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    		<span class="navbar-toggler-icon"></span>
+	  		</button>
+	  		<a class="navbar-brand" href="#" style="padding-left: 12vw; font-size: 40px;font-family: Oswald;color:white ;">We Welcome {{name}} <br> to Brick oven Pizza - Menu</a>
+	  		<div class="collapse navbar-collapse" id="navbarNav" style="padding-left:25vw; " >
+	    		<ul class="navbar-nav nav-ul" style="list-style: none;background-color:#DA5827;" >
+	      			<li class="nav-item"  >
+	        			<a class="nav-link" style="color:white; list-style: none;font-size: 20px;background-color:#DA5827; border-color: black;border-width: medium;font-family: Oswald;" href="#">ONGOING ORDER<span class="sr-only">(current)</span></a>
+	      			</li> 
+			      <li class="nav-item" >
+			        	<a class="nav-link" style="color:white;font-size: 20px;list-style: none;font-size: 20px;background-color: #DA5827; border-color: black;font-family: Oswald;" href="#cartmain">CART</a>
+			      </li>
+			      <li class="nav-item" >
+			      	  <a class="nav-link" style="color:white;font-size: 20px;list-style: none;font-size: 20px;background-color: #DA5827; border-color: black;font-family: Oswald;" href="#about">PAST ORDERS</a>
+				  </li>
+				  <li class="nav-item" >
+					<a class="nav-link" style="color:white;font-size: 20px;list-style: none;font-size: 20px;background-color: #DA5827; border-color: black;font-family: Oswald;" href="#about">RECOMMENDED</a>
+			  </li>
+                <li class="nav-item" >
+					<a class="nav-link" style="color:white;font-size: 20px;list-style: none;font-size: 20px;background-color: #DA5827; border-color: black;font-family: Oswald;" href='/logout'>LOGOUT</a>
+			  </li>
+	    		</ul>
+	  		</div>
+		</nav>
+		<div id="about" class="container-fluid">	<!-- This div should contain Information about your company -->
+	
+			<div class="row" id="about-row">
+				<div class="col-md-12" align="center" style="font-size: 30px; font-family: Oswald;">
+				 Our PIZZAS
+				</div>
+			</div>
+		
+		</div>
+	<div class="container-fluid" id="maincontainer">
+		
+		<div align="center" id="row1" class="row">
+			<div class="col-md-4" style="padding-bottom: 15px;">
+				<img src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/images/IndianTandooriPaneer.jpg">
+				<div id="pro-info">
+					<p class="product-name">Veg Tandoori Pizza</p><p class="product-price">Rs199</p>
+					<button class="btn btn-secondary" id="btn1">ADD to Cart</button>
+				</div>
+			</div>
+			<div class="col-md-4"> 
+				<img src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/images/pizza_mania_tomato.png">
+				<div id="pro-info">
+					<p class="product-name"> Tomato mania Pizza</p><p class="product-price">Rs199</p>
+					<button class="btn btn-secondary" id="btn2">ADD to Cart</button>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<img src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/images/supreme-pizza.jpg">
+				<div id="pro-info">
+					<p class="product-name">Veg Supreme Pizza</p>
+					<p class="product-price">Rs 399</p>
+					<button class="btn btn-secondary" id="btn3">ADD to Cart</button>
+				</div>
+			</div>
+			</div>
+
+			<div id="about" class="container-fluid" style="padding-right: 40%;padding-left: 40%;">	<!-- This div should contain Information about your company -->
+	
+				<div class="row" id="about-row">
+					<div class="col-md-12" align="center" style="font-size: 30px; font-family: Oswald;">
+					STARTERS
+					</div>
+				</div>
+			
+			</div>
+
+
+			<div align="center" id="row1" class="row">
+			<div class="col-md-4">
+				<img src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/images/cheesebread.jpg">
+				<div id="pro-info">
+					<p class="product-name">Cheese Bread</p><p class="product-price">120</p>
+					<button class="btn btn-secondary" id="btn4">ADD to Cart</button>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<img src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/images/garlicbread.jpg">
+				<div id="pro-info">
+					<p class="product-name">Garlic Bread</p><p class="product-price">100</p>
+					<button class="btn btn-secondary" id="btn5">ADD to Cart</button>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<img src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/images/chesesticks.jpg">
+				<div id="pro-info">
+					<p class="product-name">Cheese sticks</p><p class="product-price">150</p>
+					<button class="btn btn-secondary" id="btn6">ADD to Cart</button>
+				</div>
+			</div>
+			</div>
+
+			<div id="about" class="container-fluid" style="padding-right: 40%;padding-left: 40%;">	
+	
+				<div class="row" id="about-row">
+					<div class="col-md-12" align="center" style="font-size: 30px; font-family: Oswald;">
+					DESSERTS
+					</div>
+				</div>
+			
+			</div>
+
+
+			<div align="center" id="row1" class="row">
+			<div class="col-md-4">
+				<img src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/images/cheesecake.jfif">
+				<div id="pro-info">
+					<p class="product-name">Cheese Cake</p><p class="product-price">Rs 150</p>
+					<button class="btn btn-secondary" id="btn7">ADD to Cart</button>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<img src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/images/chocomouse.jpg">
+				<div id="pro-info">
+					<p class="product-name">Chocolate Mousse</p><p class="product-price">Rs 120</p>
+					<button class="btn btn-secondary" id="btn8">ADD to Cart</button>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<img src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/images/volcanocake.png">
+				<div id="pro-info">
+					<p class="product-name">Volcano Cake</p><p class="product-price">Rs 130</p>
+					<button class="btn btn-secondary" id="btn9">ADD to Cart</button>
+				</div>
+			</div>
+			</div>
+            <div align="center" id="row1" class="row">
+			<div class="col-md-4">
+				<img src="https://s3.ap-south-1.amazonaws.com/www.databasemanagement.com/images/creamecake.jpg">
+				<div id="pro-info">
+					<p class="product-name">Ice Cream Cake</p><p class="product-price">Rs 150</p>
+					<button class="btn btn-secondary" id="btn10">ADD to Cart</button>
+				</div>
+			</div>
+		
+			</div>
+	</div>
+
+<div id="cartmain" class="container-fluid">
+	<div class="container" id="cart">
+		<div class="row">
+			<div class="col-md-12" id="cart-heading" align="center">
+				Shopping Cart
+			</div>
+		</div>
+		<hr>
+		<div class="row" id="table-row">
+            <div>
+                 <p style="font-family: Oswald;">Number of customers here now at this time: 22 </p>
+                {{!-- <p style="font-family: Oswald;">Number of customers here at this time last week: 24 </p> --}}
+
+            {{!-- <p style="font-family: Oswald;">Number of customers visited on this day last week: 86 </p> --}}
+            <table style="width:100%">
+  <tr>
+    <th style="text-align: center;">Time</th>
+    <th style="text-align: center;">Number of People Predicted</th>
+  </tr>
+  <tr>
+    <td style="text-align: center;">11:00-12:00</td>
+    <td style="text-align: center;">25</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">12:00-13:00</td>
+    <td style="text-align: center;">25</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">13:00-14:00</td>
+    <td style="text-align: center;">20</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">14:00-15:00</td>
+    <td style="text-align: center;">15</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">15:00-16:00</td>
+    <td style="text-align: center;">25</td>
+  </tr>
+</table>
+			</div>
+
+			<table class="table table-striped" id="item-table">
+			  <thead>
+			    <tr>
+			      <th>Item Id</th>
+			      <th>Product Name</th>
+			      <th>Price</th>
+			      <th>Quantity</th>
+			      <th>Total</th>
+                  <th>Remarks</th>
+			    </tr>
+			  </thead>
+              
+			  <tbody id="item-table-body">
+
+			  </tbody>
+			</table>
+            <div>
+            <h5>Select TimeSlot</h5>
+            <select onchange="selectedSubjectName()" id="subjectName">
+<option>11:00-12:00</option>
+<option>12:00-1:00</option>
+<option>1:00-2:00</option>
+<option>2:00-3:00</option>
+<option>3:00-4:00</option>
+
+</select>
+  <button id="placeorder" style="font-family: Oswald;">Place Order</button>
+
+</div>
+
+
+
+		</div>
+			<div class="row" align="center">
+				<div class="col-md-12">
+					<div>Grand Total : <label id="totalLabel">0</label>
+				</div>
+			</div>
+		</div>
+		<hr>
+
+	</div>
+</div>
+<div id="about" class="container-fluid">	<!-- This div should contain Information about your company -->
+	
+	<div class="row" id="about-row">
+		<div class="col-md-12" align="center">
+		Copyright | Shop-Online
+		</div>
+	</div>
+
+</div>
+
+</body>
+</html>
